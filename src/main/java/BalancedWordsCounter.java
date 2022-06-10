@@ -10,7 +10,7 @@ public class BalancedWordsCounter {
         int output = 0;
 
         for(int i = 0; i < input.length(); i++){
-            for(int j = i+1; j < input.length()+1; j++)
+            for(int j = i+1; j < input.length() + 1; j++)
                 if(isBalanced(input.substring(i, j)))
                     output++;
         }
@@ -38,7 +38,7 @@ public class BalancedWordsCounter {
                 .forEach(i -> {
                     char c = (char) i;
                     if(occurrences.putIfAbsent(c, 1) != null)
-                        occurrences.put(c, occurrences.get(c)+1);
+                        occurrences.put(c, occurrences.get(c) + 1);
                 });
 
         //Checks if each character appears the same number of times
